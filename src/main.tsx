@@ -17,7 +17,7 @@ const queryClient = new QueryClient({
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/traektoria/">
       <Provider store={store}>
         <QueryClientProvider client={queryClient}>
           <App />

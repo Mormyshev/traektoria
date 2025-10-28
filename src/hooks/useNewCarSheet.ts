@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { addCar } from "@/redux/slices/carsSlice";
 import { useState } from "react";
-import type { Car } from "@/@types/cars.types";
 
 export const useNewCarSheet = () => {
   const dispatch = useDispatch();
@@ -38,7 +37,7 @@ export const useNewCarSheet = () => {
       price: 0,
     },
   });
-  const onSubmit = (data: Car) => {
+  const onSubmit = (data: any) => {
     dispatch(addCar(data));
     setIsOpen(false);
     reset();

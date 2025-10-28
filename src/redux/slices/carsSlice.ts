@@ -46,11 +46,9 @@ const carsSlice = createSlice({
       ).carsStore.cars.sort((a: Car, b: Car) => (a.price > b.price ? -1 : 1));
     },
     delCar(state, action) {
-      debugger;
       state.cars = state.cars.filter((car) => car.id !== action.payload);
     },
     setNewNameYearCar(state, action) {
-      debugger;
       const index = state.cars.findIndex((car) => car.id === action.payload.id);
       state.cars[index].name = action.payload.name;
       state.cars[index].price = action.payload.price;

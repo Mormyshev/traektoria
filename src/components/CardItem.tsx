@@ -26,7 +26,6 @@ const CardItem = (car: Car) => {
     errors,
     setCarId,
   } = useCardItem();
-  debugger;
   return (
     <Card className="bg-gray-100">
       <CardHeader className="flex flex-col">
